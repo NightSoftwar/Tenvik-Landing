@@ -520,8 +520,10 @@ article > div:last-child img {
     }
 
     .article_contenido h1 {
-        font-size: clamp(2.25rem, 10vw, 3.5rem);
-        letter-spacing: -1.8px;
+        max-width: 100%;
+        font-size: clamp(2rem, 8.5vw, 3rem);
+        line-height: 1.07;
+        letter-spacing: -1.4px;
     }
 
     .article_descripcion {
@@ -530,6 +532,7 @@ article > div:last-child img {
     }
 
     .article_contenido_botones {
+        justify-content: center;
         margin-top: 24px;
     }
 
@@ -564,6 +567,11 @@ article > div:last-child img {
     .header_nav::after {
         right: 20px;
         left: 20px;
+    }
+
+    .article_contenido h1 {
+        font-size: clamp(1.85rem, 8.8vw, 2.35rem);
+        letter-spacing: -1px;
     }
 }
 
