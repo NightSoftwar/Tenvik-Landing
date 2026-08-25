@@ -101,14 +101,14 @@ header {
 }
 
 .btn_demo {
-    min-height: 42px;
-    padding: 0 21px;
+    min-height: 38px;
+    padding: 0 18px;
     border: 0;
     border-radius: 10px;
     background: var(--orange);
     color: var(--white);
     font-family: inherit;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 700;
     cursor: pointer;
     box-shadow: 0 7px 15px rgba(244, 81, 42, 0.16);
@@ -143,6 +143,12 @@ header {
 
     .header_obtener {
         gap: 18px;
+    }
+
+    .btn_demo {
+        min-height: 36px;
+        padding: 0 16px;
+        font-size: 12px;
     }
 }
 
@@ -208,12 +214,13 @@ header {
     }
 
     .header_obtener {
-        justify-content: stretch;
+        justify-content: flex-start;
     }
 
     .btn_demo {
-        min-height: 40px;
-        width: 100%;
+        min-height: 34px;
+        padding: 0 14px;
+        font-size: 11px;
     }
 }
 
@@ -226,6 +233,12 @@ header {
 
     .header_nav nav a {
         padding: 9px 6px;
+    }
+
+    .btn_demo {
+        min-height: 32px;
+        padding: 0 12px;
+        font-size: 11px;
     }
 }
 
