@@ -38,68 +38,96 @@
 </head>
 
 <body>
-    <header>
-        <div class="header_logo">
-            <img src="/assets/tenvik_logo.png" alt="Tenvik POS Logo">
-            <h3>Tenvik</h3>
+    <header class="site-header">
+        <div class="site-header__brand">
+            <img class="site-header__logo" src="/assets/tenvik_logo.png" alt="Tenvik POS Logo">
+            <h3 class="site-header__name">Tenvik</h3>
         </div>
-        <button class="menu_toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
+        <button class="site-header__toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>
         </button>
-        <div class="header_nav">
-            <nav>
-                <ul>
-                    <li><a href="#">Características</a></li>
-                    <li><a href="#">Contacto</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Precios</a></li>
-                    <li><a href="#">Soluciones</a></li>
+        <div class="site-header__nav">
+            <nav class="site-header__menu" aria-label="Navegación principal">
+                <ul class="site-header__list">
+                    <li><a class="site-header__link" href="#Inicio">Inicio</a></li>
+                    <li><a class="site-header__link" href="#Caracteristicas">Características</a></li>
+                    <li><a class="site-header__link" href="#">Contacto</a></li>
+                    <li><a class="site-header__link" href="#">FAQ</a></li>
+                    <li><a class="site-header__link" href="#">Precios</a></li>
+                    <li><a class="site-header__link" href="#">Soluciones</a></li>
                 </ul>
             </nav>
-            <div class="header_obtener">
-                <button class="btn_demo">Obtener Demo</button>
-            </div>
+            <!-- <div class="site-header__action">
+                <button class="site-header__demo">Obtener Demo</button>
+            </div> -->
         </div>
     </header>
     <main>
-        <article>
-            <div class="article_contenido">
-                <p>Todo en uno & Gestion Empresarial</p>
-                <h1>
-                    <span class="h1-principal">Gestiona tu negocio.</span>
-                    <span class="h1-acento">Más inteligente, rápido y fácil.</span>
+        <article class="hero">
+            <div class="hero__content" id="Inicio">
+                <p class="hero__eyebrow">Todo en uno & Gestion Empresarial</p>
+                <h1 class="hero__title">
+                    <span class="hero__title-line">Gestiona tu negocio.</span>
+                    <span class="hero__title-line hero__title-line--accent">Más inteligente, rápido y fácil.</span>
                 </h1>
-                <p class="article_descripcion">Optimiza tus ventas, controla tu inventario y administra tu negocio desde
+                <p class="hero__description">Optimiza tus ventas, controla tu inventario y administra tu negocio desde
                     un solo lugar. Tenvik te ayuda a trabajar más rápido, con reportes claros y control total de tu
                     caja.</p>
-                <div class="article_contenido_botones">
-                    <a class="btn_principal" href="">Solicitar una demo <span aria-hidden="true">&#8594;</span></a>
+                <div class="hero__actions">
+                    <a class="hero__button" href="#contacto">Solicitar una demo <span
+                            aria-hidden="true">&#8594;</span></a>
                 </div>
-                <div class="article_contenido_etiquetas">
-                    <ul>
-                        <li>
-                            <span class="etiqueta_icono" aria-hidden="true">&#10003;</span>
+                <div class="hero__benefits">
+                    <ul class="hero__benefit-list">
+                        <li class="hero__benefit">
+                            <span class="hero__benefit-icon" aria-hidden="true">&#10003;</span>
                             <span>Seguro y confiable</span>
                         </li>
-                        <li>
-                            <span class="etiqueta_icono" aria-hidden="true">&#9670;</span>
+                        <li class="hero__benefit">
+                            <span class="hero__benefit-icon" aria-hidden="true">&#9670;</span>
                             <span>Reportes en tiempo real</span>
                         </li>
-                        <li>
-                            <span class="etiqueta_icono" aria-hidden="true">&#9742;</span>
+                        <li class="hero__benefit">
+                            <span class="hero__benefit-icon" aria-hidden="true">&#9742;</span>
                             <span>Soporte para tu negocio</span>
                         </li>
                     </ul>
                 </div>
             </div>
-            <div>
-                <img src="/assets/imagen_principal.jpeg" alt="Imagen principal">
+            <div class="hero__media">
+                <img class="hero__image" src="/assets/imagen_principal.jpeg" alt="Imagen principal">
             </div>
         </article>
-        <section id="contacto">
-
+        <section class="features" id="Caracteristicas">
+            <div class="features__heading">
+                <h2>Características principales</h2>
+                <p>Las herramientas que necesitas para vender, controlar y hacer crecer tu negocio.</p>
+            </div>
+            <div class="features__grid">
+                <div class="features__card">
+                    <span class="features__icon" aria-hidden="true">&#128722;</span>
+                    <span class="card-badge">Multimoneda</span>
+                    <h3 class="features__title">Ventas y POS</h3>
+                    <p class="features__description">Cobros automáticos a la tasa del día con cálculo exacto de cambio. Sin margen de error en caja.</p>
+                    <span class="features__tag">USD y Bs</span>
+                </div>
+                <div class="features__card">
+                    <span class="features__icon" aria-hidden="true">&#128230;</span>
+                    <span class="card-badge">Inventario</span>
+                    <h3 class="features__title">Control de Stock en Tiempo Real</h3>
+                    <p class="features__description">Alertas automáticas de productos por agotarse y catálogo organizado por categorías.</p>
+                    <span class="features__tag">Alertas activas</span>
+                </div>
+                <div class="features__card">
+                    <span class="features__icon" aria-hidden="true">&#128202;</span>
+                    <span class="card-badge">Caja y Reportes</span>
+                    <h3 class="features__title">Cierres de Caja y Reportes Claros</h3>
+                    <p class="features__description">Cuadre exacto por cajero, historial de transacciones y tasa oficial en un solo clic.</p>
+                    <span class="features__tag">Control diario</span>
+                </div>
+            </div>
         </section>
     </main>
     <footer></footer>
