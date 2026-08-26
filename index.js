@@ -1,18 +1,32 @@
 const menuToggle = document.querySelector('.site-header__toggle');
 const headerNav = document.querySelector('.site-header__nav');
 
+const closeMobileMenu = () => {
+	headerNav.classList.remove('is-open');
+	document.body.classList.remove('menu-open');
+	menuToggle.setAttribute('aria-expanded', 'false');
+	menuToggle.setAttribute('aria-label', 'Abrir menú');
+};
+
+closeMobileMenu();
+
 menuToggle.addEventListener('click', () => {
 	const isOpen = headerNav.classList.toggle('is-open');
+	document.body.classList.toggle('menu-open', isOpen);
 	menuToggle.setAttribute('aria-expanded', isOpen);
 	menuToggle.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
 });
 
 headerNav.querySelectorAll('a').forEach((link) => {
 	link.addEventListener('click', () => {
-		headerNav.classList.remove('is-open');
-		menuToggle.setAttribute('aria-expanded', 'false');
-		menuToggle.setAttribute('aria-label', 'Abrir menú');
+		closeMobileMenu();
 	});
+});
+
+window.addEventListener('resize', () => {
+	if (window.innerWidth > 760) {
+		closeMobileMenu();
+	}
 });
 
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
