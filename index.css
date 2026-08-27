@@ -558,7 +558,7 @@ body.menu-open {
     .site-header__nav::before { content: 'Tenvik'; position: absolute; top: 28px; left: 78px; color: var(--color-white); font-size: 21px; font-weight: 700; letter-spacing: -0.6px; }
     .site-header__menu::before { content: ''; position: fixed; top: 22px; left: 32px; width: 34px; height: 34px; border-radius: 7px; background: var(--color-white) url('/assets/tenvik_logo.png') center / 32px 32px no-repeat; }
     .site-header__nav::after { content: ''; position: absolute; top: 76px; right: 32px; left: 32px; height: 1px; background: rgba(255, 255, 255, 0.28); }
-    .hero { width: min(calc(100% - 40px), 580px); min-height: calc(100svh - 78px); transform: translateY(-15px); padding: 48px 0 0; grid-template-columns: 1fr; gap: 44px; }
+    .hero { width: min(calc(100% - 40px), 580px); min-height: auto; transform: none; padding: 48px 0 0; grid-template-columns: 1fr; gap: 44px; }
     .hero__eyebrow { margin-bottom: 20px; font-size: 11px; }
     .hero__title { max-width: 100%; font-size: clamp(2rem, 8.5vw, 3rem); line-height: 1.07; letter-spacing: -1.4px; }
     .hero__description { margin-top: 20px; font-size: 15px; }
@@ -568,7 +568,7 @@ body.menu-open {
     .hero__media { width: 100%; margin-top: 0; overflow-x: clip; }
     .hero__image-trigger { cursor: default; }
     .hero__image { max-width: 100%; max-height: none; object-fit: contain; }
-    .features { width: 100%; margin-bottom: 48px; padding-right: 20px; padding-left: 20px; }
+    .features { width: 100%; margin-top: 0; margin-bottom: 48px; padding-right: 20px; padding-left: 20px; }
     .features__grid { grid-template-columns: 1fr; }
     .features__card { min-height: 128px; padding: 22px 20px; }
 }
