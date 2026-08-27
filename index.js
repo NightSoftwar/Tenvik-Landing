@@ -1,6 +1,6 @@
 const menuToggle = document.querySelector('.site-header__toggle');
 const headerNav = document.querySelector('.site-header__nav');
-const imageTrigger = document.querySelector('.hero__image-trigger');
+const imageTriggers = document.querySelectorAll('.hero__image-trigger, .module__image-trigger');
 
 const closeMobileMenu = () => {
 	headerNav.classList.remove('is-open');
@@ -89,8 +89,28 @@ if (sections.length) {
 	window.addEventListener('resize', updateActiveSection);
 }
 
-if (imageTrigger && window.matchMedia('(min-width: 761px)').matches) {
-	const image = imageTrigger.querySelector('img');
+const revealElements = document.querySelectorAll('.features__heading, .features__card, .modules__heading, .module');
+
+if ('IntersectionObserver' in window && revealElements.length) {
+	document.body.classList.add('reveal-ready');
+
+	const revealObserver = new IntersectionObserver((entries, observer) => {
+		entries.forEach((entry) => {
+			if (!entry.isIntersecting) {
+				return;
+			}
+
+			entry.target.classList.add('is-visible');
+			observer.unobserve(entry.target);
+		});
+	}, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
+
+	revealElements.forEach((element) => {
+		revealObserver.observe(element);
+	});
+}
+
+if (imageTriggers.length) {
 	const lightbox = document.createElement('div');
 	const lightboxImage = document.createElement('img');
 
@@ -99,8 +119,6 @@ if (imageTrigger && window.matchMedia('(min-width: 761px)').matches) {
 	lightbox.setAttribute('aria-modal', 'true');
 	lightbox.setAttribute('aria-label', 'Imagen principal ampliada');
 	lightboxImage.className = 'image-lightbox__image';
-	lightboxImage.src = image.src;
-	lightboxImage.alt = image.alt;
 	lightbox.append(lightboxImage);
 	document.body.append(lightbox);
 
@@ -109,9 +127,14 @@ if (imageTrigger && window.matchMedia('(min-width: 761px)').matches) {
 		document.body.classList.remove('menu-open');
 	};
 
-	imageTrigger.addEventListener('click', () => {
+	imageTriggers.forEach((imageTrigger) => {
+		imageTrigger.addEventListener('click', () => {
+			const image = imageTrigger.querySelector('img');
+			lightboxImage.src = image.src;
+			lightboxImage.alt = image.alt;
 		lightbox.classList.add('is-open');
 		document.body.classList.add('menu-open');
+		});
 	});
 	lightbox.addEventListener('click', (event) => {
 		if (event.target === lightbox) {
