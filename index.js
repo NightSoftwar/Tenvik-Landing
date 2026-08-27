@@ -1,5 +1,6 @@
 const menuToggle = document.querySelector('.site-header__toggle');
 const headerNav = document.querySelector('.site-header__nav');
+const imageTrigger = document.querySelector('.hero__image-trigger');
 
 const closeMobileMenu = () => {
 	headerNav.classList.remove('is-open');
@@ -86,4 +87,40 @@ if (sections.length) {
 	updateActiveSection();
 	window.addEventListener('scroll', updateActiveSection, { passive: true });
 	window.addEventListener('resize', updateActiveSection);
+}
+
+if (imageTrigger && window.matchMedia('(min-width: 761px)').matches) {
+	const image = imageTrigger.querySelector('img');
+	const lightbox = document.createElement('div');
+	const lightboxImage = document.createElement('img');
+
+	lightbox.className = 'image-lightbox';
+	lightbox.setAttribute('role', 'dialog');
+	lightbox.setAttribute('aria-modal', 'true');
+	lightbox.setAttribute('aria-label', 'Imagen principal ampliada');
+	lightboxImage.className = 'image-lightbox__image';
+	lightboxImage.src = image.src;
+	lightboxImage.alt = image.alt;
+	lightbox.append(lightboxImage);
+	document.body.append(lightbox);
+
+	const closeLightbox = () => {
+		lightbox.classList.remove('is-open');
+		document.body.classList.remove('menu-open');
+	};
+
+	imageTrigger.addEventListener('click', () => {
+		lightbox.classList.add('is-open');
+		document.body.classList.add('menu-open');
+	});
+	lightbox.addEventListener('click', (event) => {
+		if (event.target === lightbox) {
+			closeLightbox();
+		}
+	});
+	document.addEventListener('keydown', (event) => {
+		if (event.key === 'Escape') {
+			closeLightbox();
+		}
+	});
 }
