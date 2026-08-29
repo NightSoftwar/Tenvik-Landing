@@ -2,9 +2,42 @@ const menuToggle = document.querySelector('.site-header__toggle');
 const headerNav = document.querySelector('.site-header__nav');
 const imageTriggers = document.querySelectorAll('.hero__image-trigger, .module__image-trigger');
 
+// Bloqueo de scroll seguro para iOS: fija el body en su posición actual
+// (en vez de solo overflow:hidden) para que los elementos position:fixed
+// no salten a la parte superior del documento cuando la página está
+// desplazada. Con contador por si dos overlays se solapan.
+let scrollLockY = 0;
+let scrollLockCount = 0;
+
+const lockScroll = () => {
+	if (scrollLockCount === 0) {
+		scrollLockY = window.scrollY || window.pageYOffset || 0;
+		document.body.style.position = 'fixed';
+		document.body.style.top = `-${scrollLockY}px`;
+		document.body.style.left = '0';
+		document.body.style.right = '0';
+		document.body.style.width = '100%';
+	}
+	scrollLockCount += 1;
+};
+
+const unlockScroll = () => {
+	scrollLockCount = Math.max(0, scrollLockCount - 1);
+	if (scrollLockCount === 0) {
+		document.body.style.position = '';
+		document.body.style.top = '';
+		document.body.style.left = '';
+		document.body.style.right = '';
+		document.body.style.width = '';
+		window.scrollTo(0, scrollLockY);
+	}
+};
+
 const closeMobileMenu = () => {
-	headerNav.classList.remove('is-open');
-	document.body.classList.remove('menu-open');
+	if (headerNav.classList.contains('is-open')) {
+		headerNav.classList.remove('is-open');
+		unlockScroll();
+	}
 	menuToggle.setAttribute('aria-expanded', 'false');
 	menuToggle.setAttribute('aria-label', 'Abrir menú');
 };
@@ -13,9 +46,14 @@ closeMobileMenu();
 
 menuToggle.addEventListener('click', () => {
 	const isOpen = headerNav.classList.toggle('is-open');
-	document.body.classList.toggle('menu-open', isOpen);
 	menuToggle.setAttribute('aria-expanded', isOpen);
 	menuToggle.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
+
+	if (isOpen) {
+		lockScroll();
+	} else {
+		unlockScroll();
+	}
 });
 
 headerNav.querySelectorAll('a').forEach((link) => {
@@ -218,8 +256,10 @@ if (imageTriggers.length) {
 	document.body.append(lightbox);
 
 	const closeLightbox = () => {
-		lightbox.classList.remove('is-open');
-		document.body.classList.remove('menu-open');
+		if (lightbox.classList.contains('is-open')) {
+			lightbox.classList.remove('is-open');
+			unlockScroll();
+		}
 	};
 
 	imageTriggers.forEach((imageTrigger) => {
@@ -227,8 +267,8 @@ if (imageTriggers.length) {
 			const image = imageTrigger.querySelector('img');
 			lightboxImage.src = image.src;
 			lightboxImage.alt = image.alt;
-		lightbox.classList.add('is-open');
-		document.body.classList.add('menu-open');
+			lightbox.classList.add('is-open');
+			lockScroll();
 		});
 	});
 	lightbox.addEventListener('click', (event) => {

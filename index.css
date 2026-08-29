@@ -40,10 +40,6 @@ body {
     overflow-x: clip;
 }
 
-body.menu-open {
-    overflow: hidden;
-}
-
 /* ---------- Header ---------- */
 
 .site-header {
