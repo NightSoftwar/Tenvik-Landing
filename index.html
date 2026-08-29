@@ -55,7 +55,7 @@
                     <li><a class="site-header__link" href="#Caracteristicas">Características</a></li>
                     <li><a class="site-header__link" href="#Modulos">Módulos</a></li>
                     <li><a class="site-header__link" href="#FAQ">FAQ</a></li>
-                    <li><a class="site-header__link" href="#">Contacto</a></li>
+                    <li><a class="site-header__link" href="#Contacto">Contacto</a></li>
                 </ul>
             </nav>
             <!-- <div class="site-header__action">
@@ -66,7 +66,7 @@
     <main>
         <article class="hero">
             <div class="hero__content" id="Inicio">
-                <p class="hero__eyebrow">Todo en uno & Gestion Empresarial</p>
+                <p class="hero__eyebrow">Todo en uno &amp; Gestión Empresarial</p>
                 <h1 class="hero__title">
                     <span class="hero__title-line">Gestiona tu negocio.</span>
                     <span class="hero__title-line hero__title-line--accent">Más inteligente, rápido y fácil.</span>
@@ -75,7 +75,7 @@
                     un solo lugar. Tenvik te ayuda a trabajar más rápido, con reportes claros y control total de tu
                     caja.</p>
                 <div class="hero__actions">
-                    <a class="hero__button" href="#contacto">Solicitar una demo <span
+                    <a class="hero__button" href="#Contacto">Solicitar una demo <span
                             aria-hidden="true">&#8594;</span></a>
                 </div>
                 <div class="hero__benefits">
@@ -99,6 +99,30 @@
                 <button class="hero__image-trigger" type="button" aria-label="Ampliar imagen principal">
                     <img class="hero__image" src="/assets/imagen_principal.jpeg" alt="Imagen principal">
                 </button>
+                <div class="hero__ticket" aria-hidden="true">
+                    <div class="hero__ticket-row hero__ticket-row--head">
+                        <span>Tenvik POS</span>
+                        <span>#00184</span>
+                    </div>
+                    <div class="hero__ticket-divider"></div>
+                    <div class="hero__ticket-row">
+                        <span>Tasa del día</span>
+                        <span>Bs. 187,40</span>
+                    </div>
+                    <div class="hero__ticket-row">
+                        <span>Pago</span>
+                        <span>$5,00</span>
+                    </div>
+                    <div class="hero__ticket-row">
+                        <span>Cambio exacto</span>
+                        <span>Bs. 28,10</span>
+                    </div>
+                    <div class="hero__ticket-divider"></div>
+                    <div class="hero__ticket-row hero__ticket-row--total">
+                        <span>Total</span>
+                        <span>$4,35</span>
+                    </div>
+                </div>
             </div>
             <div class="brand-banner" aria-label="Ryze Corporation, desarrolladores de Tenvik">
                 <div class="brand-banner__track">
@@ -256,8 +280,61 @@
                 </article>
             </div>
         </section>
+
+        <section class="contact" id="Contacto">
+            <div class="contact__container">
+                <div class="contact__content">
+                    <p class="contact__eyebrow">Contacto</p>
+                    <h2>Solicita tu demo</h2>
+                    <p>Completa los datos y te contactaremos por WhatsApp para agendar tu demostración.</p>
+                </div>
+
+                <form class="contact__form" id="contactForm">
+                    <input class="contact__honeypot" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+                    <div class="contact__field">
+                        <label for="clienteNombre">Tu Nombre</label>
+                        <input id="clienteNombre" name="clienteNombre" type="text" placeholder="Ej. Ana García" autocomplete="off" autocapitalize="off" spellcheck="false" required>
+                    </div>
+
+                    <div class="contact__field">
+                        <label for="negocioNombre">Nombre del Negocio</label>
+                        <input id="negocioNombre" name="negocioNombre" type="text" placeholder="Ej. Minimarket La Plaza" autocomplete="off" autocapitalize="off" spellcheck="false" required>
+                    </div>
+
+                    <div class="contact__field">
+                        <label for="tipoNegocio">Tipo de Negocio</label>
+                        <input id="tipoNegocio" name="tipoNegocio" type="text" placeholder="Ej. Minimarket, licorería, restaurante" autocomplete="off" autocapitalize="off" spellcheck="false" required>
+                    </div>
+
+                    <button class="contact__button" type="submit">Solicitar Demo por WhatsApp</button>
+                </form>
+            </div>
+        </section>
     </main>
-    <footer></footer>
+    <footer class="site-footer">
+        <div class="site-footer__top">
+            <div class="site-footer__brand">
+                <img class="site-footer__logo" src="/assets/tenvik_logo.png" alt="Tenvik POS Logo">
+                <div>
+                    <p class="site-footer__name">Tenvik</p>
+                    <p class="site-footer__tagline">Sistema administrativo y punto de venta para comercios.</p>
+                </div>
+            </div>
+            <nav class="site-footer__nav" aria-label="Enlaces del pie de página">
+                <a href="#Inicio">Inicio</a>
+                <a href="#Caracteristicas">Características</a>
+                <a href="#Modulos">Módulos</a>
+                <a href="#FAQ">FAQ</a>
+                <a href="#Contacto">Contacto</a>
+            </nav>
+        </div>
+        <div class="site-footer__divider"></div>
+        <div class="site-footer__bottom">
+            <p class="site-footer__copyright">&copy; 2026 Tenvik POS. Todos los derechos reservados.</p>
+            <p class="site-footer__credit">Diseñado y desarrollado por <span>Ryze Corporation</span></p>
+        </div>
+    </footer>
     <script src="/index.js"></script>
 </body>
 
