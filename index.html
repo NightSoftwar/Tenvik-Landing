@@ -33,8 +33,44 @@
     <meta name="twitter:image:alt" content="Logo de Tenvik POS">
 
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="canonical" href="https://tenvik-landing.vercel.app/">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link rel="stylesheet" href="/index.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Tenvik POS",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Windows, Web",
+        "description": "Sistema administrativo y punto de venta para minimarkets y comercios: ventas multimoneda (USD/Bs), control de inventario y cierres de caja.",
+        "url": "https://tenvik-landing.vercel.app/",
+        "image": "https://tenvik-landing.vercel.app/assets/og-image.png",
+        "brand": {
+            "@type": "Organization",
+            "name": "Ryze Corporation"
+        },
+        "offers": {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStock",
+            "url": "https://tenvik-landing.vercel.app/#Contacto"
+        }
+    }
+    </script>
+
+    <!-- Google Analytics (GA4) -->
+    <!-- Reemplaza G-XXXXXXXXXX por tu Measurement ID real (Admin > Data Streams > Web en Google Analytics) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
 </head>
 
 <body>
@@ -126,8 +162,11 @@
             </div>
             <div class="brand-banner" aria-label="Ryze Corporation, desarrolladores de Tenvik">
                 <div class="brand-banner__track">
-                    <span>Desarrollado por Ryze Corporation · Diseño, desarrollo e innovación para negocios más ágiles · Soluciones digitales que convierten operaciones en crecimiento · Sistema Tenvik</span>
-                    <span aria-hidden="true">Desarrollado por Ryze Corporation · Diseño, desarrollo e innovación para negocios más ágiles · Soluciones digitales que convierten operaciones en crecimiento · Sistema Tenvik</span>
+                    <span>Desarrollado por Ryze Corporation · Diseño, desarrollo e innovación para negocios más ágiles ·
+                        Soluciones digitales que convierten operaciones en crecimiento · Sistema Tenvik</span>
+                    <span aria-hidden="true">Desarrollado por Ryze Corporation · Diseño, desarrollo e innovación para
+                        negocios más ágiles · Soluciones digitales que convierten operaciones en crecimiento · Sistema
+                        Tenvik</span>
                 </div>
             </div>
         </article>
@@ -141,21 +180,24 @@
                     <span class="features__icon" aria-hidden="true">&#128722;</span>
                     <span class="card-badge">Multimoneda</span>
                     <h3 class="features__title">Ventas y POS</h3>
-                    <p class="features__description">Cobros automáticos a la tasa del día con cálculo exacto de cambio. Sin margen de error en caja.</p>
+                    <p class="features__description">Cobros automáticos a la tasa del día con cálculo exacto de cambio.
+                        Sin margen de error en caja.</p>
                     <span class="features__tag">USD y Bs</span>
                 </div>
                 <div class="features__card">
                     <span class="features__icon" aria-hidden="true">&#128230;</span>
                     <span class="card-badge">Inventario</span>
                     <h3 class="features__title">Control de Stock en Tiempo Real</h3>
-                    <p class="features__description">Alertas automáticas de productos por agotarse y catálogo organizado por categorías.</p>
+                    <p class="features__description">Alertas automáticas de productos por agotarse y catálogo organizado
+                        por categorías.</p>
                     <span class="features__tag">Alertas activas</span>
                 </div>
                 <div class="features__card">
                     <span class="features__icon" aria-hidden="true">&#128202;</span>
                     <span class="card-badge">Caja y Reportes</span>
                     <h3 class="features__title">Cierres de Caja y Reportes Claros</h3>
-                    <p class="features__description">Cuadre exacto por cajero, historial de transacciones y tasa oficial en un solo clic.</p>
+                    <p class="features__description">Cuadre exacto por cajero, historial de transacciones y tasa oficial
+                        en un solo clic.</p>
                     <span class="features__tag">Control diario</span>
                 </div>
             </div>
@@ -164,14 +206,16 @@
             <div class="modules__heading">
                 <p class="modules__eyebrow">Todo el control en un solo lugar</p>
                 <h2>Herramientas que hacen crecer tu negocio</h2>
-                <p>Explora los módulos de Tenvik y descubre una forma más simple, precisa y eficiente de gestionar cada parte de tu operación.</p>
+                <p>Explora los módulos de Tenvik y descubre una forma más simple, precisa y eficiente de gestionar cada
+                    parte de tu operación.</p>
             </div>
             <div class="modules__list">
                 <article class="module">
                     <div class="module__content">
                         <span class="module__number">01</span>
                         <h3>Cobros y métodos de pago</h3>
-                        <p>Gestiona cada venta con pagos flexibles y precisos. Combina efectivo, pagos móviles, tarjetas y divisas mientras Tenvik calcula los totales y el cambio en tiempo real.</p>
+                        <p>Gestiona cada venta con pagos flexibles y precisos. Combina efectivo, pagos móviles, tarjetas
+                            y divisas mientras Tenvik calcula los totales y el cambio en tiempo real.</p>
                         <span class="module__tag">Pagos combinados y control total</span>
                     </div>
                     <div class="module__media">
@@ -184,7 +228,8 @@
                     <div class="module__content">
                         <span class="module__number">02</span>
                         <h3>Inventario y existencias</h3>
-                        <p>Administra tu catálogo con precisión. Consulta productos activos, controla las cantidades disponibles y establece niveles de stock mínimo para anticiparte a cada reposición.</p>
+                        <p>Administra tu catálogo con precisión. Consulta productos activos, controla las cantidades
+                            disponibles y establece niveles de stock mínimo para anticiparte a cada reposición.</p>
                         <span class="module__tag">Stock organizado y actualizado</span>
                     </div>
                     <div class="module__media">
@@ -197,7 +242,8 @@
                     <div class="module__content">
                         <span class="module__number">03</span>
                         <h3>Usuarios y accesos protegidos</h3>
-                        <p>Administra las cuentas que pueden acceder a Tenvik. Define perfiles para propietarios y cajeros, mantén el control de los accesos y protege la información de tu negocio.</p>
+                        <p>Administra las cuentas que pueden acceder a Tenvik. Define perfiles para propietarios y
+                            cajeros, mantén el control de los accesos y protege la información de tu negocio.</p>
                         <span class="module__tag">Roles y permisos bajo control</span>
                     </div>
                     <div class="module__media">
@@ -210,7 +256,8 @@
                     <div class="module__content">
                         <span class="module__number">04</span>
                         <h3>Arqueo y cuadre de caja</h3>
-                        <p>Genera el PDF del cierre de caja con el detalle de ventas, devoluciones, métodos de pago, billetes y diferencias para completar cada jornada con total claridad.</p>
+                        <p>Genera el PDF del cierre de caja con el detalle de ventas, devoluciones, métodos de pago,
+                            billetes y diferencias para completar cada jornada con total claridad.</p>
                         <span class="module__tag">Cierre documentado en PDF</span>
                     </div>
                     <div class="module__media">
@@ -235,7 +282,9 @@
                         <span class="faq__icon" aria-hidden="true">+</span>
                     </button>
                     <div class="faq__answer">
-                        <p>Actualizas la tasa oficial del día en un solo clic. El sistema convierte automáticamente el total de la venta y calcula el cambio exacto, permitiendo trabajar con dólares y bolívares dentro de la misma operación.</p>
+                        <p>Actualizas la tasa oficial del día en un solo clic. El sistema convierte automáticamente el
+                            total de la venta y calcula el cambio exacto, permitiendo trabajar con dólares y bolívares
+                            dentro de la misma operación.</p>
                     </div>
                 </article>
 
@@ -245,7 +294,10 @@
                         <span class="faq__icon" aria-hidden="true">+</span>
                     </button>
                     <div class="faq__answer">
-                        <p>Sí. Tenvik está pensado para funcionar con equipos estándar del negocio, como computadoras, lectores de código de barras y dispositivos de impresión compatibles con el entorno local. La integración de accesorios adicionales se valida según la configuración específica de cada establecimiento.</p>
+                        <p>Sí. Tenvik está pensado para funcionar con equipos estándar del negocio, como computadoras,
+                            lectores de código de barras y dispositivos de impresión compatibles con el entorno local.
+                            La integración de accesorios adicionales se valida según la configuración específica de cada
+                            establecimiento.</p>
                     </div>
                 </article>
 
@@ -255,7 +307,8 @@
                         <span class="faq__icon" aria-hidden="true">+</span>
                     </button>
                     <div class="faq__answer">
-                        <p>No depende de Internet para las ventas diarias. El sistema funciona en red local para mantener operaciones rápidas y estables sin interrupciones.</p>
+                        <p>No depende de Internet para las ventas diarias. El sistema funciona en red local para
+                            mantener operaciones rápidas y estables sin interrupciones.</p>
                     </div>
                 </article>
 
@@ -265,7 +318,9 @@
                         <span class="faq__icon" aria-hidden="true">+</span>
                     </button>
                     <div class="faq__answer">
-                        <p>En este momento, la conexión de varias cajas no está habilitada como configuración estándar de la solución. Su implementación se evalúa según la infraestructura del negocio y la estructura de red disponible.</p>
+                        <p>En este momento, la conexión de varias cajas no está habilitada como configuración estándar
+                            de la solución. Su implementación se evalúa según la infraestructura del negocio y la
+                            estructura de red disponible.</p>
                     </div>
                 </article>
 
@@ -275,7 +330,9 @@
                         <span class="faq__icon" aria-hidden="true">+</span>
                     </button>
                     <div class="faq__answer">
-                        <p>La interfaz es intuitiva y requiere poco tiempo de aprendizaje. Puedes recibir acompañamiento de forma remota o, si lo prefieres, también se puede evaluar la opción de apoyo presencial según la ubicación y la necesidad del negocio.</p>
+                        <p>La interfaz es intuitiva y requiere poco tiempo de aprendizaje. Puedes recibir acompañamiento
+                            de forma remota o, si lo prefieres, también se puede evaluar la opción de apoyo presencial
+                            según la ubicación y la necesidad del negocio.</p>
                     </div>
                 </article>
             </div>
@@ -290,21 +347,26 @@
                 </div>
 
                 <form class="contact__form" id="contactForm">
-                    <input class="contact__honeypot" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+                    <input class="contact__honeypot" type="text" name="website" tabindex="-1" autocomplete="off"
+                        aria-hidden="true">
 
                     <div class="contact__field">
                         <label for="clienteNombre">Tu Nombre</label>
-                        <input id="clienteNombre" name="clienteNombre" type="text" placeholder="Ej. Ana García" autocomplete="off" autocapitalize="off" spellcheck="false" required>
+                        <input id="clienteNombre" name="clienteNombre" type="text" placeholder="Ej. Ana García"
+                            autocomplete="off" autocapitalize="off" spellcheck="false" required>
                     </div>
 
                     <div class="contact__field">
                         <label for="negocioNombre">Nombre del Negocio</label>
-                        <input id="negocioNombre" name="negocioNombre" type="text" placeholder="Ej. Minimarket La Plaza" autocomplete="off" autocapitalize="off" spellcheck="false" required>
+                        <input id="negocioNombre" name="negocioNombre" type="text" placeholder="Ej. Minimarket La Plaza"
+                            autocomplete="off" autocapitalize="off" spellcheck="false" required>
                     </div>
 
                     <div class="contact__field">
                         <label for="tipoNegocio">Tipo de Negocio</label>
-                        <input id="tipoNegocio" name="tipoNegocio" type="text" placeholder="Ej. Minimarket, licorería, restaurante" autocomplete="off" autocapitalize="off" spellcheck="false" required>
+                        <input id="tipoNegocio" name="tipoNegocio" type="text"
+                            placeholder="Ej. Minimarket, licorería, restaurante" autocomplete="off" autocapitalize="off"
+                            spellcheck="false" required>
                     </div>
 
                     <button class="contact__button" type="submit">Solicitar Demo por WhatsApp</button>
